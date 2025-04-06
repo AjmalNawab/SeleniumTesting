@@ -13,25 +13,22 @@ public class xpathLocator {
 WebDriver driver=new ChromeDriver();
 driver.get("https://demo.nopcommerce.com/");
 driver.manage().window().maximize();
-		
-//xPath with single attribute
-//driver.findElement(By.xpath("//input[@id='small-searchterms']")).sendKeys("T shirt");
-
-//xpath with multiple attributes
-//driver.findElement(By.xpath("//input[@id='small-searchterms'][@placeholder='Search store']")).sendKeys("book");
-//
 
 
 ////xpath with and operator
-//driver.findElement(By.xpath("//input[@name='q' and @placeholder='Search store']")).sendKeys("ajmal");
+//
+//driver.findElement(By.xpath("//input[@name='q' and @placeholder='Search store']")).sendKeys("Mobile");
 
 ////xpath with or operator
-//driver.findElement(By.xpath("//input[@name='q' or @placeholder='store']")).sendKeys("ajmal");
+//
+//driver.findElement(By.xpath("//input[@name='q' or @placeholder='Search Store']")).sendKeys("Samsung");
 
-//xPath with inner text
+//
+////xpath with  inner text
 //driver.findElement(By.xpath("//*[text()='Facebook']")).click();
 
-//xpath for inner text without linkText
+
+////xpath with  inner text without linkText
 //boolean displayStatus=driver.findElement(By.xpath("//*[text()='News']")).isDisplayed();
 //System.out.println(displayStatus);
 //
@@ -39,16 +36,13 @@ driver.manage().window().maximize();
 //System.out.println(text);
 
 
-//xpath contains method
-//
-//driver.findElement(By.xpath("//input[contains(@placeholder,'Search')]")).sendKeys("any value");
+////xpath with  contains method
+//driver.findElement(By.xpath("//input[contains(@aria-label,'store')]")).sendKeys("iphone");
 
-////xpath with starts-with method
-//driver.findElement(By.xpath("//input[starts-with(@placeholder,'Search')]")).sendKeys("any shirt");
 
-//chained xpath
-boolean chainedpath =driver.findElement(By.xpath("//div[@class='header-logo']/a/img")).isDisplayed();
-System.out.println(chainedpath);
+////xpath with  starts-with  method
+driver.findElement(By.xpath("//input[starts-with(@aria-label,'Search')]")).sendKeys("any phone");
+
 
 	}
 
