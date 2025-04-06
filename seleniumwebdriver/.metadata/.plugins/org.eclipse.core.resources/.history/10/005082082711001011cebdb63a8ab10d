@@ -1,0 +1,43 @@
+package XpathSession;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class xpathLocator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+WebDriver driver=new ChromeDriver();
+driver.get("https://demo.nopcommerce.com/");
+driver.manage().window().maximize();
+		
+//xPath with single attribute
+//driver.findElement(By.xpath("//input[@id='small-searchterms']")).sendKeys("T shirt");
+
+//xpath with multiple attributes
+//driver.findElement(By.xpath("//input[@id='small-searchterms'][@placeholder='Search store']")).sendKeys("book");
+//
+
+
+////xpath with and operator
+//driver.findElement(By.xpath("//input[@name='q' and @placeholder='Search store']")).sendKeys("ajmal");
+
+////xpath with or operator
+//driver.findElement(By.xpath("//input[@name='q' or @placeholder='store']")).sendKeys("ajmal");
+
+//xPath with inner text
+//driver.findElement(By.xpath("//*[text()='Facebook']")).click();
+
+//xpath 
+boolean displayStatus=driver.findElement(By.xpath("//*[text()='News']")).isDisplayed();
+System.out.print(displayStatus);
+
+
+driver.findElement(By.xpath("//*[text()='News']")).getText();
+
+	}
+
+}
